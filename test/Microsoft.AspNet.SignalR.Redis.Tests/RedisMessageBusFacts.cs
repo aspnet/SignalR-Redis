@@ -114,7 +114,7 @@ namespace Microsoft.AspNet.SignalR.Redis.Tests
         }
 
         [Fact]
-        public void OpenCalledOnConnectionRestored()
+        public async void OpenCalledOnConnectionRestored()
         {
             int openInvoked = 0;
             var wh = new ManualResetEventSlim();
@@ -137,7 +137,7 @@ namespace Microsoft.AspNet.SignalR.Redis.Tests
             var instance = redisMessageBus.Object;
 
             // Give constructor time to "connect"
-            Task.Delay(100).Wait();
+            await Task.Delay(100);
 
             redisConnection.Raise(mock => mock.ConnectionRestored += null, new Exception());
 

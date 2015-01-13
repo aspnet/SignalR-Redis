@@ -7,11 +7,6 @@
     },
     "frameworks": {
         "aspnet50": {
-        },
-        "aspnetcore50": {
-            "dependencies": {
-                "System.Reflection": "4.0.10-*"
-            }
         }
     }
 }

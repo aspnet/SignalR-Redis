@@ -48,7 +48,7 @@ namespace Microsoft.AspNet.SignalR.Redis
 
             _connection = connection;
 
-            _logger = loggerFactory.Create("SignalR." + typeof(RedisMessageBus).Name);
+            _logger = loggerFactory.Create(GetType().FullName);
 
             ReconnectDelay = TimeSpan.FromSeconds(2);
 

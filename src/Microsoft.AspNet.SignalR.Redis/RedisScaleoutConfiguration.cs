@@ -10,7 +10,7 @@ namespace Microsoft.AspNet.SignalR.Redis
     public class RedisScaleoutConfiguration : ScaleoutConfiguration
     {
         public RedisScaleoutConfiguration()
-            : this("localhost", 6379, "", "")
+            : this("localhost", 6379, "", "_default")
         {
         }
 
