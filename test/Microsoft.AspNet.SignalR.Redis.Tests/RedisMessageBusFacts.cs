@@ -105,7 +105,8 @@ namespace Microsoft.AspNet.SignalR.Redis.Tests
                 }
             });
 
-            var redisMessageBus = new RedisMessageBus(new Mock<IStringMinifier>().Object, new TestLoggerFactory(), new PerformanceCounterManager(new TestLoggerFactory()), new SignalROptionsAccessor(), new RedisOptionsAccessor(), redisConnection.Object, false);
+            var redisMessageBus = new RedisMessageBus(new Mock<IStringMinifier>().Object, new TestLoggerFactory(),
+                new PerformanceCounterManager(new TestLoggerFactory()), new SignalROptionsAccessor(), new RedisOptionsAccessor(), redisConnection.Object, false);
 
             await redisMessageBus.ConnectWithRetry();
 
@@ -170,7 +171,7 @@ namespace Microsoft.AspNet.SignalR.Redis.Tests
             redisConnection.Setup(m => m.RestoreLatestValueForKey(It.IsAny<int>(), It.IsAny<string>())).Returns(() =>
             {
                 restoreLatestValueForKey = true;
-                return TaskAsyncHelper.Empty;
+                return Task.FromResult<object>(null);
             });
 
             var redisMessageBus = new RedisMessageBus(new Mock<IStringMinifier>().Object, new TestLoggerFactory(), new PerformanceCounterManager(new TestLoggerFactory()), new SignalROptionsAccessor(), new RedisOptionsAccessor(), redisConnection.Object, false);
