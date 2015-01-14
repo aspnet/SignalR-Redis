@@ -32,29 +32,5 @@ namespace Microsoft.Framework.DependencyInjection
 
             return services;
         }
-
-        //public static IServiceCollection AddSignalRRedis(this IServiceCollection services, string server, int port, string password, string eventKey)
-        //{
-        //    var configuration = new RedisScaleoutConfiguration(server, port, password, eventKey);
-
-        //    return AddSignalRRedis(services, configuration);
-        //}
-
-        //public static IServiceCollection AddSignalRRedis(this IServiceCollection services, RedisScaleoutConfiguration configuration)
-        //{
-        //    //var describer = new ServiceDescriber(configuration);
-        //    //services.TryAdd(describer.Transient<IConfigureOptions<RedisOptions>, RedisOptionsSetup>());
-        //    //services.TryAdd(describer.Singleton<IMessageBus, RedisMessageBus>());
-            
-        //    services.AddTransient<IConfigureOptions<RedisScaleoutConfiguration>, RedisOptionsSetup>();
-        //    services.AddSingleton<IMessageBus, RedisMessageBus>();
-
-        //    //if (configuration != null)
-        //    {
-        //        services.Configure<RedisScaleoutConfiguration>(configuration);
-        //    }
-
-        //    return services;
-        //}
     }
 }
