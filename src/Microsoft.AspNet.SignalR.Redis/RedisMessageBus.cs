@@ -48,7 +48,7 @@ namespace Microsoft.AspNet.SignalR.Redis
 
             _connection = connection;
 
-            _logger = loggerFactory.Create(GetType().FullName);
+            _logger = loggerFactory.Create<RedisMessageBus>();
 
             ReconnectDelay = TimeSpan.FromSeconds(2);
 
@@ -91,18 +91,18 @@ namespace Microsoft.AspNet.SignalR.Redis
 
                 switch (oldState)
                 {
-                case State.Connected:
-                    Shutdown();
-                    break;
-                case State.Closed:
-                case State.Disposing:
-                    // No-op
-                    break;
-                case State.Disposed:
-                    Interlocked.Exchange(ref _state, State.Disposed);
-                    break;
-                default:
-                    break;
+                    case State.Connected:
+                        Shutdown();
+                        break;
+                    case State.Closed:
+                    case State.Disposing:
+                        // No-op
+                        break;
+                    case State.Disposed:
+                        Interlocked.Exchange(ref _state, State.Disposed);
+                        break;
+                    default:
+                        break;
                 }
             }
 
