@@ -21,12 +21,12 @@ namespace Microsoft.AspNet.SignalR.Redis
 
         public RedisScaleoutConfiguration(string connectionString, string eventKey)
         {
-            if(connectionString == null)
+            if(String.IsNullOrEmpty(connectionString))
             {
                 throw new ArgumentNullException("connectionString");
             }
 
-            if(eventKey == null)
+            if(String.IsNullOrEmpty(eventKey))
             {
                 throw new ArgumentNullException("eventKey");
             }
