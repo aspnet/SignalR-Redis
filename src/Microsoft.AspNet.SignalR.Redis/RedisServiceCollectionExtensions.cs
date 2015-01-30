@@ -10,19 +10,19 @@ namespace Microsoft.Framework.DependencyInjection
 {
     public static class RedisServiceCollectionExtensions
     {
-        public static IServiceCollection AddRedis(this IServiceCollection services, Action<RedisScaleoutConfiguration> configureOptions = null)
+        public static IServiceCollection AddRedis(this IServiceCollection services, Action<RedisScaleoutOptions> configureOptions = null)
         {
             return services.AddRedis(configuration: null, configureOptions: configureOptions);
         }
 
-        public static IServiceCollection AddRedis(this IServiceCollection services, IConfiguration configuration, Action<RedisScaleoutConfiguration> configureOptions)
+        public static IServiceCollection AddRedis(this IServiceCollection services, IConfiguration configuration, Action<RedisScaleoutOptions> configureOptions)
         {
             services.AddSingleton<IMessageBus, RedisMessageBus>();
             services.AddSingleton<IRedisConnection, RedisConnection>();
 
             if (configuration != null)
             {
-                services.Configure<RedisScaleoutConfiguration>(configuration);
+                services.Configure<RedisScaleoutOptions>(configuration);
             }
 
             if(configureOptions != null)

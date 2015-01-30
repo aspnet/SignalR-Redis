@@ -28,8 +28,8 @@ namespace Microsoft.AspNet.SignalR.Redis
                                      ILoggerFactory loggerFactory,
                                      IPerformanceCounterManager performanceCounterManager,
                                      IOptions<SignalROptions> optionsAccessor,
-                                     IOptions<RedisScaleoutConfiguration> scaleoutConfigurationAccessor, IRedisConnection connection)
-            : this(stringMinifier, loggerFactory, performanceCounterManager, optionsAccessor, scaleoutConfigurationAccessor, connection, true)
+                                     IOptions<RedisScaleoutOptions> scaleoutOptionsAccessor, IRedisConnection connection)
+            : this(stringMinifier, loggerFactory, performanceCounterManager, optionsAccessor, scaleoutOptionsAccessor, connection, true)
         {
         }
 
@@ -37,14 +37,14 @@ namespace Microsoft.AspNet.SignalR.Redis
                                      ILoggerFactory loggerFactory,
                                      IPerformanceCounterManager performanceCounterManager,
                                      IOptions<SignalROptions> optionsAccessor,
-                                     IOptions<RedisScaleoutConfiguration> scaleoutConfigurationAccessor,
+                                     IOptions<RedisScaleoutOptions> scaleoutOptionsAccessor,
                                      IRedisConnection connection,
                                      bool connectAutomatically)
-            : base(stringMinifier, loggerFactory, performanceCounterManager, optionsAccessor, scaleoutConfigurationAccessor)
+            : base(stringMinifier, loggerFactory, performanceCounterManager, optionsAccessor, scaleoutOptionsAccessor)
         {
-            _connectionString = scaleoutConfigurationAccessor.Options.ConnectionString;
-            _db = scaleoutConfigurationAccessor.Options.Database;
-            _key = scaleoutConfigurationAccessor.Options.EventKey;
+            _connectionString = scaleoutOptionsAccessor.Options.ConnectionString;
+            _db = scaleoutOptionsAccessor.Options.Database;
+            _key = scaleoutOptionsAccessor.Options.EventKey;
 
             _connection = connection;
 

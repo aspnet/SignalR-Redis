@@ -7,19 +7,19 @@ using Microsoft.AspNet.SignalR.Messaging;
 
 namespace Microsoft.AspNet.SignalR.Redis
 {
-    public class RedisScaleoutConfiguration : ScaleoutConfiguration
+    public class RedisScaleoutOptions : ScaleoutOptions
     {
-        public RedisScaleoutConfiguration()
+        public RedisScaleoutOptions()
             : this("localhost", 6379, "", "_default")
         {
         }
 
-        public RedisScaleoutConfiguration(string server, int port, string password, string eventKey)
+        public RedisScaleoutOptions(string server, int port, string password, string eventKey)
             : this(CreateConnectionString(server, port, password), eventKey)
         {
         }
 
-        public RedisScaleoutConfiguration(string connectionString, string eventKey)
+        public RedisScaleoutOptions(string connectionString, string eventKey)
         {
             if(String.IsNullOrEmpty(connectionString))
             {
