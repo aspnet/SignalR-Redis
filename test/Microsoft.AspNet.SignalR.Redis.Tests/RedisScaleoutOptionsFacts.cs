@@ -14,7 +14,7 @@ namespace Microsoft.AspNet.SignalR.Redis.Tests
         [InlineData("", "event")]
         public void ValidateArguments(string connectionString, string eventKey)
         {
-            Assert.Throws<ArgumentNullException>(() => new RedisScaleoutConfiguration(connectionString, eventKey));
+            Assert.Throws<ArgumentNullException>(() => new RedisScaleoutOptions(connectionString, eventKey));
         }
     }
 }

@@ -28,7 +28,7 @@ namespace Microsoft.AspNet.SignalR.Redis
                                      ILoggerFactory loggerFactory,
                                      IPerformanceCounterManager performanceCounterManager,
                                      IOptions<SignalROptions> optionsAccessor,
-                                     IOptions<RedisScaleoutConfiguration> scaleoutConfigurationAccessor, IRedisConnection connection)
+                                     IOptions<RedisScaleoutOptions> scaleoutConfigurationAccessor, IRedisConnection connection)
             : this(stringMinifier, loggerFactory, performanceCounterManager, optionsAccessor, scaleoutConfigurationAccessor, connection, true)
         {
         }
@@ -37,7 +37,7 @@ namespace Microsoft.AspNet.SignalR.Redis
                                      ILoggerFactory loggerFactory,
                                      IPerformanceCounterManager performanceCounterManager,
                                      IOptions<SignalROptions> optionsAccessor,
-                                     IOptions<RedisScaleoutConfiguration> scaleoutConfigurationAccessor,
+                                     IOptions<RedisScaleoutOptions> scaleoutConfigurationAccessor,
                                      IRedisConnection connection,
                                      bool connectAutomatically)
             : base(stringMinifier, loggerFactory, performanceCounterManager, optionsAccessor, scaleoutConfigurationAccessor)

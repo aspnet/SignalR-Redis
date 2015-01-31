@@ -32,11 +32,11 @@ namespace Microsoft.AspNet.SignalR.Redis.Tests
             }
         }
 
-        internal class RedisOptionsAccessor : IOptions<RedisScaleoutConfiguration>
+        internal class RedisOptionsAccessor : IOptions<RedisScaleoutOptions>
         {
-            private RedisScaleoutConfiguration Options = new RedisScaleoutConfiguration();
+            private RedisScaleoutOptions Options = new RedisScaleoutOptions();
 
-            RedisScaleoutConfiguration IOptions<RedisScaleoutConfiguration>.Options
+            RedisScaleoutOptions IOptions<RedisScaleoutOptions>.Options
             {
                 get
                 {
@@ -44,7 +44,7 @@ namespace Microsoft.AspNet.SignalR.Redis.Tests
                 }
             }
 
-            public RedisScaleoutConfiguration GetNamedOptions(string name)
+            public RedisScaleoutOptions GetNamedOptions(string name)
             {
                 throw new NotImplementedException();
             }
