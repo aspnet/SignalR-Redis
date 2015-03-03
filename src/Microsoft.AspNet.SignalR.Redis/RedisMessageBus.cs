@@ -27,7 +27,7 @@ namespace Microsoft.AspNet.SignalR.Redis
         public RedisMessageBus(IStringMinifier stringMinifier,
                                      ILoggerFactory loggerFactory,
                                      IPerformanceCounterManager performanceCounterManager,
-                                     IOptions<SignalROptions> optionsAccessor,
+                                     IOptions<MessageBusOptions> optionsAccessor,
                                      IOptions<RedisScaleoutOptions> scaleoutConfigurationAccessor, IRedisConnection connection)
             : this(stringMinifier, loggerFactory, performanceCounterManager, optionsAccessor, scaleoutConfigurationAccessor, connection, true)
         {
@@ -36,7 +36,7 @@ namespace Microsoft.AspNet.SignalR.Redis
         internal RedisMessageBus(IStringMinifier stringMinifier,
                                      ILoggerFactory loggerFactory,
                                      IPerformanceCounterManager performanceCounterManager,
-                                     IOptions<SignalROptions> optionsAccessor,
+                                     IOptions<MessageBusOptions> optionsAccessor,
                                      IOptions<RedisScaleoutOptions> scaleoutConfigurationAccessor,
                                      IRedisConnection connection,
                                      bool connectAutomatically)
