@@ -104,12 +104,12 @@ namespace Microsoft.AspNet.SignalR.Redis
 
                 if (!redisResult.IsNull)
                 {
-                    _logger.WriteInformation("Restored Redis Key " + key + " to the latest Value " + _latestMessageId);
+                    _logger.LogInformation("Restored Redis Key " + key + " to the latest Value " + _latestMessageId);
                 }
             }
             catch (Exception ex)
             {
-                _logger.WriteError("Error while restoring Redis Key to the latest Value: " + ex);
+                _logger.LogError("Error while restoring Redis Key to the latest Value: " + ex);
             }
         }
 

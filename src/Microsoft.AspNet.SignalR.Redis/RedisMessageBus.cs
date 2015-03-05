@@ -48,7 +48,7 @@ namespace Microsoft.AspNet.SignalR.Redis
 
             _connection = connection;
 
-            _logger = loggerFactory.Create<RedisMessageBus>();
+            _logger = loggerFactory.CreateLogger<RedisMessageBus>();
 
             ReconnectDelay = TimeSpan.FromSeconds(2);
 
@@ -111,7 +111,7 @@ namespace Microsoft.AspNet.SignalR.Redis
 
         private void Shutdown()
         {
-            _logger.WriteInformation("Shutdown()");
+            _logger.LogInformation("Shutdown()");
 
             if (_connection != null)
             {
@@ -125,7 +125,7 @@ namespace Microsoft.AspNet.SignalR.Redis
         {
             string errorMessage = (ex != null) ? ex.Message : Resources.Error_RedisConnectionClosed;
 
-            _logger.WriteInformation("OnConnectionFailed - " + errorMessage);
+            _logger.LogInformation("OnConnectionFailed - " + errorMessage);
 
             Interlocked.Exchange(ref _state, State.Closed);
         }
@@ -133,14 +133,14 @@ namespace Microsoft.AspNet.SignalR.Redis
         private void OnConnectionError(Exception ex)
         {
             OnError(0, ex);
-            _logger.WriteError("OnConnectionError - " + ex.Message);
+            _logger.LogError("OnConnectionError - " + ex.Message);
         }
 
         private async void OnConnectionRestored(Exception ex)
         {
             await _connection.RestoreLatestValueForKey(_db, _key);
 
-            _logger.WriteInformation("Connection restored");
+            _logger.LogInformation("Connection restored");
 
             Interlocked.Exchange(ref _state, State.Connected);
 
@@ -184,7 +184,7 @@ namespace Microsoft.AspNet.SignalR.Redis
                 }
                 catch (Exception ex)
                 {
-                    _logger.WriteError("Error connecting to Redis - " + ex.GetBaseException());
+                    _logger.LogError("Error connecting to Redis - " + ex.GetBaseException());
                 }
 
                 if (_state == State.Disposing)
@@ -206,11 +206,11 @@ namespace Microsoft.AspNet.SignalR.Redis
                 _connection.ConnectionRestored -= OnConnectionRestored;
             }
 
-            _logger.WriteInformation("Connecting...");
+            _logger.LogInformation("Connecting...");
 
             await _connection.ConnectAsync(_connectionString, _logger);
 
-            _logger.WriteInformation("Connection opened");
+            _logger.LogInformation("Connection opened");
 
             _connection.ErrorMessage += OnConnectionError;
             _connection.ConnectionFailed += OnConnectionFailed;
@@ -218,7 +218,7 @@ namespace Microsoft.AspNet.SignalR.Redis
 
             await _connection.SubscribeAsync(_key, OnMessage);
 
-            _logger.WriteVerbose("Subscribed to event " + _key);
+            _logger.LogVerbose("Subscribed to event " + _key);
         }
 
         internal static class State

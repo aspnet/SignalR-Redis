@@ -63,7 +63,7 @@ namespace Microsoft.AspNet.SignalR.Redis.Tests
                 return false;
             }
 
-            public void Write(LogLevel logLevel, int eventId, object state, Exception exception, Func<object, Exception, string> formatter)
+            public void Log(LogLevel logLevel, int eventId, object state, Exception exception, Func<object, Exception, string> formatter)
             {
                 return;
             }
@@ -78,7 +78,7 @@ namespace Microsoft.AspNet.SignalR.Redis.Tests
                 throw new NotImplementedException();
             }
 
-            public ILogger Create(string name)
+            public ILogger CreateLogger(string name)
             {
                 return new TestLogger();
             }
