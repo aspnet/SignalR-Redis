@@ -40,9 +40,9 @@ namespace Microsoft.AspNet.SignalR.Redis {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     Assembly assembly;
-#if ASPNETCORE50
+#if DNXCORE50
                     assembly = typeof(Resources).GetTypeInfo().Assembly;
-#elif ASPNET50
+#elif DNX451
                     assembly = typeof(Resources).Assembly;
 #endif
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Microsoft.AspNet.SignalR.Redis.Resources", assembly);

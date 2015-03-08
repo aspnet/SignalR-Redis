@@ -7,7 +7,7 @@
         "Moq": "4.2.1408.619"
     },
     "frameworks": {
-        "aspnet50": {
+        "dnx451": {
             "dependencies": {
             }
         }
