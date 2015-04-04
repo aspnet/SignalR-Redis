@@ -53,7 +53,7 @@ namespace Microsoft.AspNet.SignalR.Redis.Tests
 
         internal class TestLogger : ILogger
         {
-            public IDisposable BeginScope(object state)
+            public IDisposable BeginScopeImpl(object state)
             {
                 throw new NotImplementedException();
             }
