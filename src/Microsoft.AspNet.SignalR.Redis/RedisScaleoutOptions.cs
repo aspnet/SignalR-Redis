@@ -23,12 +23,12 @@ namespace Microsoft.AspNet.SignalR.Redis
         {
             if (String.IsNullOrEmpty(connectionString))
             {
-                throw new ArgumentNullException("connectionString");
+                throw new ArgumentNullException(nameof(connectionString));
             }
 
             if (String.IsNullOrEmpty(eventKey))
             {
-                throw new ArgumentNullException("eventKey");
+                throw new ArgumentNullException(nameof(eventKey));
             }
 
             ConnectionString = connectionString;
