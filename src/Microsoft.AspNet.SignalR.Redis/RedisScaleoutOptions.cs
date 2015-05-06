@@ -4,6 +4,7 @@
 using System;
 using System.Globalization;
 using Microsoft.AspNet.SignalR.Messaging;
+using Microsoft.Framework.Internal;
 
 namespace Microsoft.AspNet.SignalR.Redis
 {
@@ -19,18 +20,8 @@ namespace Microsoft.AspNet.SignalR.Redis
         {
         }
 
-        public RedisScaleoutOptions(string connectionString, string eventKey)
+        public RedisScaleoutOptions([NotNull] string connectionString, [Notnull] string eventKey)
         {
-            if (String.IsNullOrEmpty(connectionString))
-            {
-                throw new ArgumentNullException("connectionString");
-            }
-
-            if (String.IsNullOrEmpty(eventKey))
-            {
-                throw new ArgumentNullException("eventKey");
-            }
-
             ConnectionString = connectionString;
             EventKey = eventKey;
         }

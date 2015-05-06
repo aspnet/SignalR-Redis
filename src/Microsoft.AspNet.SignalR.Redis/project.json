@@ -3,6 +3,7 @@
     "dependencies": {
         "Microsoft.AspNet.SignalR.Server": "3.0.0-*",
         "Microsoft.Framework.ConfigurationModel.Json": "1.0.0-*",
+        "Microsoft.Framework.NotNullAttribute.Internal": { "version": "1.0.0-*", "type": "build" },
         "StackExchange.Redis": "1.0.394"
     },
     "frameworks": {
