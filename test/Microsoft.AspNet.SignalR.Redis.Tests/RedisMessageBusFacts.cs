@@ -82,6 +82,10 @@ namespace Microsoft.AspNet.SignalR.Redis.Tests
             {
                 return new TestLogger();
             }
+
+            public void Dispose()
+            {
+            }
         }
 
         [Fact]
