@@ -19,17 +19,12 @@ namespace Microsoft.AspNet.SignalR.Redis.Tests
         {
             private MessageBusOptions Options = new MessageBusOptions();
 
-            MessageBusOptions IOptions<MessageBusOptions>.Options
+            MessageBusOptions IOptions<MessageBusOptions>.Value
             {
                 get
                 {
                     return Options;
                 }
-            }
-
-            public MessageBusOptions GetNamedOptions(string name)
-            {
-                throw new NotImplementedException();
             }
         }
 
@@ -37,17 +32,12 @@ namespace Microsoft.AspNet.SignalR.Redis.Tests
         {
             private RedisScaleoutOptions Options = new RedisScaleoutOptions();
 
-            RedisScaleoutOptions IOptions<RedisScaleoutOptions>.Options
+            RedisScaleoutOptions IOptions<RedisScaleoutOptions>.Value
             {
                 get
                 {
                     return Options;
                 }
-            }
-
-            public RedisScaleoutOptions GetNamedOptions(string name)
-            {
-                throw new NotImplementedException();
             }
         }
 

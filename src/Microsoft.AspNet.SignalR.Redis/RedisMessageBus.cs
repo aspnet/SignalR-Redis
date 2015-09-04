@@ -42,9 +42,9 @@ namespace Microsoft.AspNet.SignalR.Redis
                                      bool connectAutomatically)
             : base(stringMinifier, loggerFactory, performanceCounterManager, optionsAccessor, scaleoutConfigurationAccessor)
         {
-            _connectionString = scaleoutConfigurationAccessor.Options.ConnectionString;
-            _db = scaleoutConfigurationAccessor.Options.Database;
-            _key = scaleoutConfigurationAccessor.Options.EventKey;
+            _connectionString = scaleoutConfigurationAccessor.Value.ConnectionString;
+            _db = scaleoutConfigurationAccessor.Value.Database;
+            _key = scaleoutConfigurationAccessor.Value.EventKey;
 
             _connection = connection;
 
