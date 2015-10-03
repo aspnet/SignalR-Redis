@@ -2,7 +2,7 @@
     "version": "3.0.0-*",
     "dependencies": {
         "Microsoft.AspNet.SignalR.Server": "3.0.0-*",
-        "Microsoft.Framework.Configuration.Json": "1.0.0-*",
+        "Microsoft.Extensions.Configuration.Json": "1.0.0-*",
         "StackExchange.Redis": "1.0.394"
     },
     "frameworks": {

@@ -6,7 +6,7 @@ using System.Globalization;
 using System.IO;
 using System.Text;
 using Microsoft.AspNet.SignalR.Messaging;
-using Microsoft.Framework.Logging;
+using Microsoft.Extensions.Logging;
 
 namespace Microsoft.AspNet.SignalR.Redis
 {
