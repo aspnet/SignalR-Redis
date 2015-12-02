@@ -61,8 +61,6 @@ namespace Microsoft.AspNet.SignalR.Redis.Tests
 
         internal class TestLoggerFactory : ILoggerFactory
         {
-            public LogLevel MinimumLevel { get; set; }
-
             public void AddProvider(ILoggerProvider provider)
             {
                 throw new NotImplementedException();
