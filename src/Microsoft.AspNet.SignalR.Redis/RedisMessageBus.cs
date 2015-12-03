@@ -218,7 +218,7 @@ namespace Microsoft.AspNet.SignalR.Redis
 
             await _connection.SubscribeAsync(_key, OnMessage);
 
-            _logger.LogVerbose("Subscribed to event " + _key);
+            _logger.LogDebug("Subscribed to event " + _key);
         }
 
         internal static class State

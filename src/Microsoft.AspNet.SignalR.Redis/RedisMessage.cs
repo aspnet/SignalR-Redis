@@ -45,7 +45,7 @@ namespace Microsoft.AspNet.SignalR.Redis
                     int charCode = stream.ReadByte();
                     if (charCode == -1)
                     {
-                        logger.LogVerbose("Received Message could not be parsed.");
+                        logger.LogDebug("Received Message could not be parsed.");
                         throw new EndOfStreamException();
                     }
                     char c = (char)charCode;
