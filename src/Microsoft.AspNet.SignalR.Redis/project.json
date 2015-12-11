@@ -1,15 +1,16 @@
 {
-    "version": "3.0.0-*",
-    "compilationOptions": {
-        "keyFile": "../../tools/Key.snk"
-    },
-    "dependencies": {
-        "Microsoft.AspNet.SignalR.Server": "3.0.0-*",
-        "Microsoft.Extensions.Configuration.Json": "1.0.0-*",
-        "StackExchange.Redis.StrongName": "1.0.394"
-    },
-    "frameworks": {
-        "dnx451": {
-        }
-    }
+  "version": "3.0.0-*",
+  "compilationOptions": {
+    "keyFile": "../../tools/Key.snk",
+    "warningsAsErrors": true
+  },
+  "dependencies": {
+    "Microsoft.AspNet.SignalR.Server": "3.0.0-*",
+    "Microsoft.Extensions.Configuration.Json": "1.0.0-*",
+    "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0-*",
+    "StackExchange.Redis.StrongName": "1.0.394"
+  },
+  "frameworks": {
+    "dnx451": {}
+  }
 }

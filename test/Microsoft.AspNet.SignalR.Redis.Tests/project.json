@@ -1,21 +1,22 @@
 {
-    "version": "1.0.0-*",
-    "compilationOptions": {
-        "keyFile": "../../tools/Key.snk"
-    },
-    "dependencies": {
-        "Microsoft.AspNet.SignalR.Redis": "3.0.0-*",
-        "Microsoft.Extensions.Logging": "1.0.0-*",
-        "xunit.runner.aspnet": "2.0.0-aspnet-*",
-        "Moq": "4.2.1408.619"
-    },
-    "frameworks": {
-        "dnx451": {
-            "dependencies": {
-            }
-        }
-    },
-    "commands": {
-        "test": "xunit.runner.aspnet"
+  "version": "1.0.0-*",
+  "compilationOptions": {
+    "keyFile": "../../tools/Key.snk",
+    "warningsAsErrors": true
+  },
+  "dependencies": {
+    "Microsoft.AspNet.SignalR.Redis": "3.0.0-*",
+    "Microsoft.Extensions.Logging": "1.0.0-*",
+    "xunit.runner.aspnet": "2.0.0-aspnet-*",
+    "Moq": "4.2.1408.619"
+  },
+  "frameworks": {
+    "dnx451": {
+      "dependencies": {
+      }
     }
+  },
+  "commands": {
+    "test": "xunit.runner.aspnet"
+  }
 }
