@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using Xunit;
 
-namespace Microsoft.AspNet.SignalR.Redis.Tests
+namespace Microsoft.AspNetCore.SignalR.Redis.Tests
 {
     public class RedisScaleoutConfigurationFacts
     {

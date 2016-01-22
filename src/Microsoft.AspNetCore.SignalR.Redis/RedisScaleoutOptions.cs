@@ -3,9 +3,9 @@
 
 using System;
 using System.Globalization;
-using Microsoft.AspNet.SignalR.Messaging;
+using Microsoft.AspNetCore.SignalR.Messaging;
 
-namespace Microsoft.AspNet.SignalR.Redis
+namespace Microsoft.AspNetCore.SignalR.Redis
 {
     public class RedisScaleoutOptions : ScaleoutOptions
     {

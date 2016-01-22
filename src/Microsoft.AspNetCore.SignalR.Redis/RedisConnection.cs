@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using StackExchange.Redis;
 
-namespace Microsoft.AspNet.SignalR.Redis
+namespace Microsoft.AspNetCore.SignalR.Redis
 {
     public class RedisConnection : IRedisConnection
     {

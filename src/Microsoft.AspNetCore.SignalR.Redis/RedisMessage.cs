@@ -5,10 +5,10 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Text;
-using Microsoft.AspNet.SignalR.Messaging;
+using Microsoft.AspNetCore.SignalR.Messaging;
 using Microsoft.Extensions.Logging;
 
-namespace Microsoft.AspNet.SignalR.Redis
+namespace Microsoft.AspNetCore.SignalR.Redis
 {
     public class RedisMessage
     {
