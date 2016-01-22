@@ -5,15 +5,14 @@
     "warningsAsErrors": true
   },
   "dependencies": {
-    "Microsoft.AspNetCore.SignalR.Redis": "3.0.0-*",
+    "Microsoft.AspNetCore.SignalR.Redis": "0.1.0-*",
     "Microsoft.Extensions.Logging": "1.0.0-*",
     "xunit.runner.aspnet": "2.0.0-aspnet-*",
     "Moq": "4.2.1408.619"
   },
   "frameworks": {
     "dnx451": {
-      "dependencies": {
-      }
+      "dependencies": {}
     }
   },
   "commands": {
