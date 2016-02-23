@@ -15,7 +15,5 @@
       "dependencies": {}
     }
   },
-  "commands": {
-    "test": "xunit.runner.aspnet"
-  }
+  "testRunner": "xunit"
 }
