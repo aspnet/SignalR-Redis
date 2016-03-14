@@ -39,12 +39,7 @@ namespace Microsoft.AspNetCore.SignalR.Redis {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    Assembly assembly;
-#if NETSTANDARDAPP1_5
-                    assembly = typeof(Resources).GetTypeInfo().Assembly;
-#elif DNX451
-                    assembly = typeof(Resources).Assembly;
-#endif
+                    Assembly assembly = typeof(Resources).GetTypeInfo().Assembly;
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Microsoft.AspNetCore.SignalR.Redis.Resources", assembly);
                     resourceMan = temp;
                 }

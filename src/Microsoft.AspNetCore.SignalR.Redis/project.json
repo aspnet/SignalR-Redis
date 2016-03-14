@@ -11,6 +11,6 @@
     "StackExchange.Redis.StrongName": "1.0.394"
   },
   "frameworks": {
-    "dnx451": {}
+    "net451": {}
   }
 }

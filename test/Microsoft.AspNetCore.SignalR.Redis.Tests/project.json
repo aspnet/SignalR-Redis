@@ -7,12 +7,14 @@
   "dependencies": {
     "Microsoft.AspNetCore.SignalR.Redis": "0.1.0-*",
     "Microsoft.Extensions.Logging": "1.0.0-*",
-    "xunit.runner.aspnet": "2.0.0-aspnet-*",
-    "Moq": "4.2.1408.619"
+    "Moq": "4.2.1408.619",
+    "xunit": "2.1.0"
   },
   "frameworks": {
-    "dnx451": {
-      "dependencies": {}
+    "net451": {
+      "frameworkAssemblies": {
+        "System.Threading.Tasks": ""
+      }
     }
   }
 }
