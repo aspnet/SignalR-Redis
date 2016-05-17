@@ -6,8 +6,8 @@
   },
   "dependencies": {
     "Microsoft.AspNetCore.SignalR.Server": "0.1.0-*",
-    "Microsoft.Extensions.Configuration.Json": "1.0.0-*",
-    "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0-*",
+    "Microsoft.Extensions.Configuration.Json": "1.0.0-rc2-final",
+    "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0-rc2-final",
     "StackExchange.Redis.StrongName": "1.0.394"
   },
   "frameworks": {
