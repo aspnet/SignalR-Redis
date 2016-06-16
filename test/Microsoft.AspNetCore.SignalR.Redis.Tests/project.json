@@ -1,12 +1,12 @@
 {
-  "version": "1.0.0-*",
+  "version": "1.1.0-*",
   "buildOptions": {
     "keyFile": "../../tools/Key.snk",
     "warningsAsErrors": true
   },
   "dependencies": {
-    "Microsoft.AspNetCore.SignalR.Redis": "0.1.0-*",
-    "Microsoft.Extensions.Logging": "1.0.0-*",
+    "Microsoft.AspNetCore.SignalR.Redis": "0.2.0-*",
+    "Microsoft.Extensions.Logging": "1.1.0-*",
     "Moq": "4.2.1408.619",
     "xunit": "2.1.0"
   },
